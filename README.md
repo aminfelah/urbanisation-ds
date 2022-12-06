@@ -13,3 +13,5 @@
 # this the final json of the whole any point endpoint 
 ![image](https://user-images.githubusercontent.com/60293387/205975588-05573b7e-fe45-4202-84f0-343dbfde6d90.png)
 
+![image](https://user-images.githubusercontent.com/60293387/205976225-ba770457-d95e-483e-a00e-9f739bcbda3f.png)
+
