@@ -20,9 +20,29 @@
         <scatter-gather doc:name="Scatter-Gather" doc:id="10b81a1d-d13f-448d-8b28-b42f569bcca1" >
 			<route >
 				<http:request method="GET" doc:name="Request" doc:id="75b62f60-094d-4291-b902-0abde45781db" config-ref="HTTP_Request_configuration" path="#['/dayOfWeek/' ++ payload.dayOfWeek]" />
+				<ee:transform doc:name="Transform Message" doc:id="7ddc7529-0c43-413e-baa4-e799241c4fc2" >
+					<ee:message >
+						<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	day: payload.dayofWeek
+}]]></ee:set-payload>
+					</ee:message>
+				</ee:transform>
 			</route>
 			<route >
 				<http:request method="GET" doc:name="Request" doc:id="6d5e950e-d64e-4abb-a120-cd074aaebf18" config-ref="HTTP_Request_configuration" path="#['/monthOfYear/' ++ payload.monthOfYear]"/>
+				<ee:transform doc:name="Transform Message" doc:id="980ee378-ca77-472c-982d-4d8afe1ebd68" >
+					<ee:message >
+						<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+{
+	month: payload.monthOfYear
+}]]></ee:set-payload>
+					</ee:message>
+				</ee:transform>
 			</route>
 		</scatter-gather>
 		<ee:transform doc:name="Transform Message" doc:id="d3fe37aa-8a66-4bd7-8aa5-294f99998f1a">
@@ -34,6 +54,7 @@ output application/java
 }]]></ee:set-payload>
 					</ee:message>
 				</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="3f8ce887-82bc-4032-aaec-58ce6c7ab1d8" />
 		<error-handler>
             <on-error-propagate type="APIKIT:BAD_REQUEST">
                 <ee:transform>
