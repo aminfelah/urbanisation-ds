@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="day" format="xml">
+      <types:example format="xml" element="dayofWeek" location="examples/day.xml"/>
+    </types:type>
+    <types:type name="month" format="xml">
+      <types:example format="xml" element="monthOfYear" location="examples/month.xml"/>
+    </types:type>
+    <types:type name="data" format="xml">
+      <types:example format="xml" element="data" location="examples/day-1.xml"/>
+    </types:type>
+  </types:catalog>
+</types:mule>

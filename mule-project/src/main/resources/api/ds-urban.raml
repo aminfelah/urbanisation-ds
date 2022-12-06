@@ -1,0 +1,16 @@
+  #%RAML 1.0
+  title: Format Date
+  version: v1
+  baseUri: /my-date
+
+  /my-date:
+    post:
+      body:
+        application/json:
+          example:
+            {
+                "dayOfWeek": 5,
+                "dayOfMonth": 5,
+              "monthOfYear": 5,
+              "year": 5,
+}
