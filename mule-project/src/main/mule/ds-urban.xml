@@ -48,9 +48,11 @@ output application/json
 		<ee:transform doc:name="Transform Message" doc:id="d3fe37aa-8a66-4bd7-8aa5-294f99998f1a">
 					<ee:message>
 						<ee:set-payload><![CDATA[%dw 2.0
-output application/java
+output application/json
 ---
 {
+	day: payload."0".payload.day,
+	month: payload."1".payload.month
 }]]></ee:set-payload>
 					</ee:message>
 				</ee:transform>
