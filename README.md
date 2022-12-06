@@ -10,3 +10,6 @@
 ![image](https://user-images.githubusercontent.com/60293387/205973161-406f3256-defb-4727-b3b4-fd4b35d40a47.png)
 
 ![image](https://user-images.githubusercontent.com/60293387/205974709-a7b8b416-2064-45a7-8da4-6cf97af8f8aa.png)
+# this the final json of the whole any point endpoint 
+![image](https://user-images.githubusercontent.com/60293387/205975588-05573b7e-fe45-4202-84f0-343dbfde6d90.png)
+
